@@ -6,12 +6,12 @@ const color = require('./lib/color')
 
 // Cria um cliente de inicialização da BOT
 const start = (kill = new Client()) => {
-    console.log(color('\n> DEV OFICIAL ='), color('SAMU330', 'yellow'))
+    console.log(color('\n> DEV OFICIAL ='), color('MAU', 'yellow'))
 	console.log(color('\n>'), color('Instalacion finalizada, ya puede usar comandos...\n', 'red'))
 	
 		// Forçar recarregamento caso obtenha erros
 		kill.onStateChanged((state) => {
-			console.log('[Estado de Íris]', state)
+			console.log('[Estado del BOT]', state)
 			if (state === 'CONFLICT' || state === 'UNLAUNCHED') kill.forceRefocus()
 		})
 	
@@ -37,7 +37,7 @@ const start = (kill = new Client()) => {
         kill.onAddedToGroup(((chat) => {
             let totalMem = chat.groupMetadata.participants.length
             if (totalMem < 20) { 
-            	kill.sendText(chat.id, `Un nuevo grupo, uwu! 😃\nLástima que no tenga el requisito, que es tener al menos [20] miembros. Tienes ${totalMem}, reune más gente! 😉`).then(() => kill.leaveGroup(chat.id))
+            	kill.sendText(chat.id, `Un nuevo grupo! 😃\nLástima que no tenga el requisito, que es tener al menos [20] miembros. Tienes ${totalMem}, reune más gente! 😉`).then(() => kill.leaveGroup(chat.id))
             } else {
                 kill.sendText(chat.groupMetadata.id, `Oi! 🌟\nMe solicitaron como BOT para este grupo, ¡y estaré a su disposición! 🤖\nSi quieres ver mis funciones usa /menu!`)
             }
