@@ -98,5 +98,5 @@ Edite las API que se encuentran en:
 - [ArugaZ](https://github.com/ArugaZ/whatsapp-bot)
 - [MhankBarBar](https://github.com/MhankBarBar/whatsapp-bot)
 - [Samu330](https://github.com/Samu330)
-- [Mau](https://wa.me/+529991256032) (https://www.github.com/trabis9)
+- [Mau](https://wa.me/+529991256032) [GitHub_Site](https://www.github.com/trabis9)
 - ¡Les agradezco sinceramente sus excelentes API!
