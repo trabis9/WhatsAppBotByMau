@@ -219,7 +219,7 @@ module.exports = kconfig = async (kill, message) => {
 			break
 			
 			
-		case 'WhatsApp Mod':
+		case 'WhatsAppMod':
     await kill.reply(from, 'Aquí te dejo el canal de mi amigo SantiModdz, ¡espero que lo apoyes! https://www.youtube.com/channel/UC_adq6Pz8T5CuxCdVSYikRA', id)
     break
 	
