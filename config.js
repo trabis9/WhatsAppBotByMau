@@ -95,18 +95,18 @@ module.exports = kconfig = async (kill, message) => {
 		
 		
         const mess = {
-            wait: '✅¿Puedes esperar un rato? Realizar este tipo de comando lleva algún tiempo🏳.',
+            wait: '✅¿Puedes esperar un momento? Realizar este tipo de comando toma un tiempo :v🏳.',
             error: {
-                St: '¡Lo usaste mal jaja! \nPara usar esto, envía o etiqueta una foto con este mensaje.',
-                Ki: 'Para eliminar administradores, primero debe eliminar su ADM.',
-                Ad: '¡Errores! No pude agregarlo, podría deberse a la limitación de agregar o mis errores.',
+                St: '¡Lo usaste mal :V:V! \nPara usar esto, envía o etiqueta una foto con este mensaje.',
+                Ki: 'Para eliminar administradores, primero debe quitarle el rango de Admin.',
+                Ad: '¡Error! No pude agregarlo, podría deberse a la limitación de agregar o un error del bot.',
                 Go: 'Por qué, solo el propietario de un grupo puede usar este tipo de comando.',
 		Kl: '¡Ups! Ese es solo mi creador, no puedes acceder.',
-		Ga: 'Solo los administradores pueden usarlo, así que chaoo jaja!',
+		Ga: 'Solo los administradores pueden usar este comando!',
 		Gp: 'Lo siento, pero este es un comando para grupos.🕳💦.',
-		Ac: 'Solo los grupos que permiten contenido +18 pueden usar comandos como este, si usted es el propietario y desea esto, use /nsfw enable o use en PRIV.',
+		Ac: 'Solo los grupos que permiten contenido +18 pueden usar comandos como este, si usted es el propietario y desea esto, use /nsfw enable o use al Priv.',
 		Ba: 'Estimado administrador, si desea que use estos comandos, debe permitirme ser admin😙!',
-                Iv: '¿Este enlace es correcto? Me parece mal...'
+                Iv: 'Este enlace es incorrecto...'
             }
         }
 	
@@ -135,20 +135,20 @@ module.exports = kconfig = async (kill, message) => {
 			}
 		} else {
             if (chats.match(/(https?:\/\/chat.whatsapp.com)/gi)) {
-				console.log('Se recibió un enlace de grupo, pero era de alguien en la Lista Blanca o en el PV.')
+				console.log('Se recibió un enlace de grupo, pero era de alguien en la Lista Blanca o en el Priv.')
 			}
 		}
 	            
         // ANTI FLOOD PRIVADO
         if (isCmd && msgFilter.isFiltered(from) && !isGroupMsg) {
-        await kill.reply(from, '¡Ei! Espere 10 segundos antes de usar otros comandos!', id)
+        await kill.reply(from, '¡Espere 5 segundos antes de usar otros comandos!', id)
 		return console.log(color('FLOOD AS', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'de', color(pushname))
 		}
 		
 		
 		// ANTI FLOOD GRUPOS
         if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) {
-		await kill.reply(from, 'Ei! Espere 10 segundos antes de usar otros comandos!', id)
+		await kill.reply(from, 'Espere 5 segundos antes de usar otros comandos!', id)
 		return console.log(color('FLOOD AS', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'de', color(pushname), 'em', color(name || formattedTitle))
 		}
 		
@@ -219,12 +219,12 @@ module.exports = kconfig = async (kill, message) => {
 			break
 			
 			
-		case 'anonymod':
-    await kill.reply(from, 'Algunos videos del canal de mi bro DEIVID\n\nWhatsApp ANONYMOUS V.06 oFc 100% inmune\n\nhttps://youtu.be/tOE_ywldS_Q\n\nComo modificar un WA prt-1\n\nhttps://youtu.be/WdWsvY3xGPc\n\nWhAtsApp BusSines Golden/13\n\nhttps://youtu.be/JqSHAWlGhDY\n\nNumero virtual +48 método efectivo\n\nhttps://youtu.be/7GOss7AaJ88\n\nNumero virtual +1 EE.Uu (ANONYMOUS DEIVID)\n\nhttps://youtu.be/D1G6hI1mLs4\n\nCreando con pixelLab (ANONYMOUS DEIVID)\n\nhttps://youtu.be/so1y1g-MPZ4\n\nSu video mas reciente:\n\nhttps://youtu.be/hy4od9BT-tA\n\nEspero y lo apoyes🤗', id)
+		case 'WhatsApp Mod':
+    await kill.reply(from, 'Aquí te dejo el canal de mi amigo SantiModdz, ¡espero que lo apoyes! https://www.youtube.com/channel/UC_adq6Pz8T5CuxCdVSYikRA', id)
     break
 	
-	    case 'samu330':
-    await kill.reply(from, '｡☆✼★━━━━━━━━━━━━★✼☆｡\n\nHola!😀\n\nTe gustaria apoyarme?\n\nSolo unete a mi grupo de WhatsApp: https://chat.whatsapp.com/ELeHAmX3P6j1xy1qNRjEXR\n\n* ◄ ◊ ► ◄ ◊ ► ◄ ◊ ► ◄ ◊ ► ◄ ◊ ►*\n\nO puedes suscribirte a mi canal para saber como instalar un Bot: https://www.youtube.com/channel/UCqPXxG2ZdDe_ugOqMHDRMqg\n\n✩｡:*•.─────  ❁ ❁  ─────.•*:｡✩\n\nO seamos amigos en facebook: https://facebook.com/tupapi.samu330', id)
+		case 'Mau:v':
+    await kill.reply(from, '｡☆✼★━━━━━━━━━━━━★✼☆｡\n\nHola!😀\n\nTienes alguna duda sobre el bot?\n\nSolo hablame al privado ----> https://wa.me/+529991256032', id)
     break	
 			
 		case 'about':
@@ -371,7 +371,7 @@ if (isMedia) {
                         })
                     })
                 } else {
-                    kill.reply(from, `Encaso de que reciba esto considere 2 opciones.\n\n1 - Esto no es un gif o video.\n\n2 - el gif o video supera los 15 segudnos.`, id)
+                    kill.reply(from, `En caso de que reciba esto considere 2 opciones.\n\n1 - Esto no es un gif o video.\n\n2 - el gif o video supera los 15 segudnos.`, id)
                 }
 			} else {
                 kill.reply(from, mess.error.St, id)
@@ -400,7 +400,7 @@ if (isMedia) {
 			console.log(stkfm)
             await kill.sendStickerfromUrl(from, stkfm)
 			.catch(() => {
-                kill.reply(from, 'No se ha recibido ninguna imagen o el servidor está desconectado, inténtalo más tarde.', id)
+                kill.reply(from, 'No se ha recibido ninguna imagen, o el servidor está desconectado, inténtalo más tarde.', id)
             })
             break
 			
@@ -441,14 +441,14 @@ if (isMedia) {
             const eu = await kill.getGroupMembers(groupId)
             const gostosa = eu[Math.floor(Math.random() * eu.length)]
 			console.log(gostosa.id)
-            await kill.sendTextWithMentions(from, `*ＤＥＴＥＣＴＯＲ   ＤＥ  GROCERIAS👩‍⚕️*\n\n*pi pi pi pi*  \n*pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipi*\n\n@${gostosa.id.replace(/@c.us/g, '')} *ALTO HAÍ🖐*\n\n*A SIDO MULTADO!!*\n\n*1 por no decir buenos días, buenas tardes, buenas noches y otro por ser muy*\n\n*grocero(o)*\n\n*valor de la multa:*\n*FOTO DESNUD@ AL PRIV kkkkk*`)
+            await kill.sendTextWithMentions(from, `*ＤＥＴＥＣＴＯＲ   ＤＥ  GROSERIAS👩‍⚕️*\n\n*pi pi pi pi*  \n*pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipi*\n\n@${gostosa.id.replace(/@c.us/g, '')} *ALTO AHÍ🖐*\n\n*A SIDO MULTADO!!*\n\n*1 por no decir buenos días, buenas tardes, buenas noches y otro por ser muy*\n\n*grocero(o)*\n\n*valor de la multa:*\n*FOTO DESNUD@ AL PRIV kkkkk*`)
             await sleep(2000)
             break			
 
 			
 			
 		case 'math':
-            if (args.length == 0) return kill.reply(from, 'No especificaste una cuenta de matemáticas.', id)
+            if (args.length == 0) return kill.reply(from, 'No especificaste una operación matemática.', id)
             const mtk = body.slice(6)
             if (typeof math.evaluate(mtk) !== "number") {
             kill.reply(from, `¿Incluso abriste una cuenta? No parece eh!.`, id)
@@ -518,9 +518,9 @@ if (isMedia) {
             if (!isBotGroupAdmins) return kill.reply(from, mess.error.Ba, id)
 			if (onar.length !== 1) return kill.reply(from, `Olvidaste encenderlo (ON) o apagarlo [Off].`, id)
             if (onar[0] == 'on') {
-				kill.setGroupToAdminsOnly(groupId, true).then(() => kill.sendText(from, 'Se cierra el grupo!\nSE ABRIRA EN UNOS MOMENTOS :)'))
+				kill.setGroupToAdminsOnly(groupId, true).then(() => kill.sendText(from, 'Se cierra el grupo!\nSE ABRIRÁ EN UNOS MOMENTOS :)'))
 			} else if (onar[0] == 'off') {
-				kill.setGroupToAdminsOnly(groupId, false).then(() => kill.sendText(from, 'Ya pueden escribir gente!! NOMAS NO LLENEN EL CHAT!!🥶'))
+				kill.setGroupToAdminsOnly(groupId, false).then(() => kill.sendText(from, 'Ya pueden escribir gente!! NOMÁS NO LLENEN EL CHAT!!🥶'))
 			} else {
 				kill.reply(from, `Olvidaste encenderlo (ON) o apagarlo [Off].`, id)
 			}
@@ -528,8 +528,8 @@ if (isMedia) {
 			
 			
 		case 'legiao':
-			if (isGroupMsg) return kill.reply(from, 'Puede ser que este grupo no permita enlaces, así que use ese comando en el PV, ¿de acuerdo?', id)
-			kill.sendLinkWithAutoPreview(from, 'https://wa.me/+529984907794', 'Genial que te hayas interesado en contactar a samu!\nAqui esta su whats!', id)
+			if (isGroupMsg) return kill.reply(from, 'Puede ser que este grupo no permita enlaces, así que use ese comando en el Priv, ¿de acuerdo?', id)
+			kill.sendLinkWithAutoPreview(from, 'https://wa.me/+529991256032', 'Genial que te hayas interesado en contactar Mau!\nAqui esta su whats!', id)
 			break
 			
 			
@@ -537,7 +537,7 @@ if (isMedia) {
 			if (!isGroupMsg) return kill.reply(from, mess.error.Gp, id)
             if (!isGroupAdmins) return kill.reply(from, mess.error.Ga, id)
             if (!isBotGroupAdmins) return kill.reply(from, mess.error.Ba, id)
-			await kill.revokeGroupInviteLink(groupId).then(() => kill.reply(from, 'Allí se cumplió tu orden! e.e', id))
+			await kill.revokeGroupInviteLink(groupId).then(() => kill.reply(from, 'Ahí se cumplió tu orden! e.e', id))
 			break
 			
 			
@@ -586,7 +586,7 @@ if (isMedia) {
 		case 'img':
             if (quotedMsg && quotedMsg.type == 'sticker') {
                 const mediaData = await decryptMedia(quotedMsg)
-                kill.reply(from, `Podrias esperar porfavor? esto lleva un poco de tiempo👑`, id)
+                kill.reply(from, `Ten paciencia, esto lleva un poco de tiempo👑`, id)
                 const stickerImage = `data:${quotedMsg.mimetype};base64,${mediaData.toString('base64')}`
                 await kill.sendFile(from, stickerImage, '', 'Disfruta, aquí tienes tu foto! :D', id)
 			} else if (!quotedMsg) return kill.reply(from, `Lo siento, esto es solo para stickers...`, id)
@@ -598,7 +598,7 @@ if (isMedia) {
             if (matn == 1) {
             const nime = await axios.get(`http://api.i-tech.id/anim/anime?key=${techapi}`)
 			console.log(nime.data)
-			await kill.sendFileFromUrl(from, nime.data.result, ``, `Veo que eres un hombre / mujer de cultura.`, id)
+			await kill.sendFileFromUrl(from, nime.data.result, ``, `Veo que eres un hombre / mujer de cultura. *tose* pedófilo *cof* *cof*`, id)
             } else if (matn == 2) {
             const nime2 = await randomNimek('anime')
 			console.log(nime2.data)
@@ -642,7 +642,7 @@ if (isMedia) {
             const nulisp = await tulis(nulisq)
             await kill.sendImage(from, `${nulisp}`, '', 'Hermoso diario amigo...', id)
             .catch(() => {
-                kill.reply(from, 'Qué pena, la imagen no quiso enviarse o el servidor denegó el acceso...', id)
+                kill.reply(from, 'Que pena, la imagen no quiso enviarse o el servidor denegó el acceso...', id)
             })
             break
 
@@ -691,7 +691,7 @@ if (isMedia) {
 			const pint = await linp.json()
             let erest = pint[Math.floor(Math.random() * pint.length) + 1]
 			console.log(erest)
-            await kill.sendFileFromUrl(from, erest, '', 'Fueron muchos pero espero que les guste la imagen que elegí ^^!', id)
+            await kill.sendFileFromUrl(from, erest, '', 'Fueron muchos resultados, espero que le haya atinado ^^!', id)
 			.catch(() => {
                 kill.reply(from, 'No se ha recibido ninguna imagen o el servidor está desconectado, inténtalo más tarde.', id)
             })
@@ -731,7 +731,7 @@ if (isMedia) {
 
         case 'fox':
             const fox = await axios.get(`http://api.i-tech.id/tools/foxes?key=${techapi}`)
-			await kill.sendFileFromUrl(from, fox.data.result, ``, 'Que lindo zorro <3', id)
+			await kill.sendFileFromUrl(from, fox.data.result, ``, 'Que lindo furro <3', id)
 			break
 
 
@@ -920,7 +920,7 @@ if (isMedia) {
 
 
 		case 'send':
-			if (args.length == 0) return kill.reply(from, 'Olvidaste poner un enlace de imagen jaja!', id)
+			if (args.length == 0) return kill.reply(from, 'Olvidaste poner un enlace de imagen!', id)
 			const file = body.slice(6)
 			if (file.endsWith('.jpg')) {
 				await kill.sendFileFromUrl(from, file, '', '', id)
@@ -1065,15 +1065,15 @@ if (isMedia) {
 
 
         case 'criador':
-            kill.sendContact(from, 'wa.me/+529984907794')
-			kill.reply(from, 'Si no responde, solo espera, es raro que deje Internet ~Smitten guy sabe~, pero si sucedió, fue algo importante..', id)
+            kill.sendContact(from, 'wa.me/+529991256032')
+			kill.reply(from, 'Si no responde, solo espera, es raro que deje Internet, pero si sucedió, fue algo importante..', id)
             break
 
 
         case 'donate':
 		case 'doar':
             kill.sendText(from, donate, id)
-            kill.sendContact(from, 'wa.me/+529984907794')
+            kill.sendContact(from, 'wa.me/+529991256032')
             break
 
 
@@ -1235,7 +1235,7 @@ if (isMedia) {
 			
 
         case 'google':
-            if (args.length == 0) return kill.reply(from, `Digite algo para buscar.`, id)
+            if (args.length == 0) return kill.reply(from, `Escriba algo para buscar.`, id)
 		    const googleQuery = body.slice(8)
             google({ 'query': googleQuery }).then(results => {
             let vars = `_*Resultados de búsqueda de Google para: ${googleQuery}*_\n`
@@ -1357,7 +1357,7 @@ if (isMedia) {
 						kill.reply(from, '[❗] no se encontraron resultados...')
 					}
 				} else {
-					kill.reply(from, 'Lo usó mal, intente verificar si el comando es correcto.')
+					kill.reply(from, 'Lo usó mal, verifique si el comando es correcto.')
 				}
 			} else {
 				if (args.length == 1) {
@@ -1576,9 +1576,9 @@ if (isMedia) {
 		case 'sip':
 			if (args.length == 1) {
 				const ip = await axios.get(`http://ipwhois.app/json/${body.slice(5)}`)
-				await kill.sendLinkWithAutoPreview(from, `http://www.google.com/maps/place/${ip.data.latitude},${ip.data.longitude}`, `\n✪ IP: ${ip.data.ip}\n\n✪ Tipo: ${ip.data.type}\n\n✪ Region: ${ip.data.region}\n\n✪ Ciudad: ${ip.data.city}\n\n✪ Latitud: ${ip.data.latitude}\n\n✪ Longitud: ${ip.data.longitude}\n\n✪ Provedor: ${ip.data.isp}\n\n✪ Continente: ${ip.data.continent}\n\n✪ Sigla del continente: ${ip.data.continent_code}\n\n✪ País: ${ip.data.country}\n\n✪ Sigla del País: ${ip.data.country_code}\n\n✪ Capital do País: ${ip.data.country_capital}\n\n✪ DDI: ${ip.data.country_phone}\n\n✪ Países Vesinos: ${ip.data.country_neighbours}\n\n✪ Horário: ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n\n✪ Moneda: ${ip.data.currency}\n\n✪ Sigla de Moneda: ${ip.data.currency_code}\n\nBusca de IP realizada por Íris - Samu330!`, id)
+				await kill.sendLinkWithAutoPreview(from, `http://www.google.com/maps/place/${ip.data.latitude},${ip.data.longitude}`, `\n✪ IP: ${ip.data.ip}\n\n✪ Tipo: ${ip.data.type}\n\n✪ Region: ${ip.data.region}\n\n✪ Ciudad: ${ip.data.city}\n\n✪ Latitud: ${ip.data.latitude}\n\n✪ Longitud: ${ip.data.longitude}\n\n✪ Provedor: ${ip.data.isp}\n\n✪ Continente: ${ip.data.continent}\n\n✪ Sigla del continente: ${ip.data.continent_code}\n\n✪ País: ${ip.data.country}\n\n✪ Sigla del País: ${ip.data.country_code}\n\n✪ Capital do País: ${ip.data.country_capital}\n\n✪ DDI: ${ip.data.country_phone}\n\n✪ Países Vesinos: ${ip.data.country_neighbours}\n\n✪ Horário: ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n\n✪ Moneda: ${ip.data.currency}\n\n✪ Sigla de Moneda: ${ip.data.currency_code}\n\nBusca de IP realizada por Mau!`, id)
             } else {
-				await kill.reply(from, 'Especifique una IP de tipo IPV4.', id)
+				await kill.reply(from, 'Especifique una IP de tipo IPv4.', id)
             }
 			break
 			
@@ -1640,7 +1640,7 @@ if (isMedia) {
             const allMem = await kill.getGroupMembers(groupId)
             for (let i = 0; i < allMem.length; i++) {
                 if (groupAdmins.includes(allMem[i].id)) {
-                    console.log('Me salté un ADM.')
+                    console.log('Me salté un Admin.')
                 } else {
                     await kill.removeParticipant(groupId, allMem[i].id)
                 }
@@ -1810,9 +1810,9 @@ if (isMedia) {
 
         case 'leave':
 			if (isGroupMsg && isGroupAdmins) {
-				await kill.sendText(from,'Tendré que irme pero nos eremos pronto! <3').then(() => kill.leaveGroup(groupId))
+				await kill.sendText(from,'Tendré que irme pero nos veremos pronto! <3').then(() => kill.leaveGroup(groupId))
 			} else if (isGroupMsg && isOwner) {
-				await kill.sendText(from,'Tendré que irme pero nos eremos pronto! <3').then(() => kill.leaveGroup(groupId))
+				await kill.sendText(from,'Tendré que irme pero nos veremos pronto! <3').then(() => kill.leaveGroup(groupId))
 			} else if (isGroupMsg) {
 				await kill.reply(from, 'Lo siento, solo los administradores y mi propietario pueden usar este comando...', id)
 			} else {
@@ -2761,7 +2761,7 @@ if (isMedia) {
 
         case 'menu':
 			const timed = moment(t * 1000).format('DD/MM/YY HH:mm:ss')
-			const allin = `Hola usuario "@${sender.id}"!\n\nMe lleve ${processTime(t, moment())} segundos para responder.\n\nAhora son exactamente "${timed}".\nAqui abajito estan todas mis funciones.\n`
+			const allin = `Hola usuario "@${sender.id}"!\n\nMe llevé ${processTime(t, moment())} segundos para responder.\n\nAhora son exactamente "${timed}".\nAqui abajito estan todas mis funciones.\n`
             kill.sendTextWithMentions(from, allin + help, id)
             kill.reply(from, '💢De otros comandos tenemos...\n\n*/Admins* _❌es para administradores._\n\n*/Kill* _🖤🖤es solo para mi dueño._\n\n*/Adult* _🍆🍆es el menú de comandos para adultos😈._\n\n*/Down* _⚠es el menú de descarga de música y video._\n\n*/termux* _🚧Comandos para termux🚧_', id)
             break
